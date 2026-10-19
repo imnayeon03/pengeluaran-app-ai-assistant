@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pencatat Pengeluaran (VERSI BUG)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bug-banner">VERSI BERBUG (untuk demonstrasi). Versi final: index.html</div>
+  <div class="container">
+    <h1>Pencatat Pengeluaran</h1>
+
+    <form id="expense-form" novalidate>
+      <input type="text" id="desc-input" placeholder="Deskripsi (mis. Makan siang)" />
+      <input type="number" id="amount-input" placeholder="Nominal (Rp)" />
+      <select id="category-input">
+        <option value="Makanan">Makanan</option>
+        <option value="Transportasi">Transportasi</option>
+        <option value="Belanja">Belanja</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+      <button type="submit">Tambah</button>
+    </form>
+    <p id="form-error" class="form-error" role="alert"></p>
+
+    <div class="filter-group">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="Makanan">Makanan</button>
+      <button class="filter-btn" data-filter="Transportasi">Transportasi</button>
+      <button class="filter-btn" data-filter="Belanja">Belanja</button>
+      <button class="filter-btn" data-filter="Lainnya">Lainnya</button>
+    </div>
+
+    <div class="summary">
+      <p id="expense-total"></p>
+      <p id="expense-count"></p>
+    </div>
+
+    <button id="clear-all-btn" class="clear-btn" disabled>Hapus Semua Pengeluaran</button>
+
+    <ul id="expense-list"></ul>
+  </div>
+
+  <script src="app.buggy.js"></script>
+</body>
+</html>
